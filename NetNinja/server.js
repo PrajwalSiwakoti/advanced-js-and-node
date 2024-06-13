@@ -30,6 +30,8 @@ const server =  http.createServer((req, res)=>{
     }
    
     fs.readFile(viewsPath, (err, data) => {
+        //res.write(data);
+        //return res.end() //if return not mentioned, wii continuing executing other urls//but not exactly in this case
         if(err){
             res.write(err);
             res.end();
