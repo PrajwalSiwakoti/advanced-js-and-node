@@ -6,7 +6,9 @@ let myPromise = new Promise(function(resolve, reject){
     const a = 4;
     const b = 4;
 
+    console.log(1);
     setTimeout(function(){
+        console.log(2);
         if(a === b){
             resolve('The values are equal');
         }
@@ -17,7 +19,7 @@ let myPromise = new Promise(function(resolve, reject){
 });
 
 //pending state//try without setTimeout
-//console.log(myPromise);
+console.log(myPromise);
 
 //consuming your promises
 myPromise.then(function(result){
